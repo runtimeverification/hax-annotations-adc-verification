@@ -40,19 +40,17 @@ rhs = sum as u64 + (carry_out as u64) << 32
 lhs == rhs
 ```
 
-## problems (hax issues we identify during this work)
+## problems (hax issues we identify and open)
 
 After running `cargo hax into lean`, extracted lean file wouldn't compile because of next gaps:
 
-- Adding u64 + u64 after casts from u32 (Missing instances for type combinations in operation chains)
-- Addition with a bit shift result (Issue with casts between types of different bit widths)
+- Adding u64 + u64 after casts from u32 (Missing instances for type combinations in operation chains). Issue #[1911](https://github.com/cryspen/hax/issues/1911)
+- Addition with a bit shift result (Issue with casts between types of different bit widths) Issue #[1912] (https://github.com/cryspen/hax/issues/1912)
 - Missing instances for type combinations in operation chains
+Issue #[1916] (https://github.com/cryspen/hax/issues/1916)
 - Tuple2 does not provide .fst/.snd access methods (Missing projection functions for tuples)
+Issue #[1913] (https://github.com/cryspen/hax/issues/1913)
 - error with hax_bv_decide ("None of the hypotheses are in the supported BitVec fragment") which means that tactic can not work with current operations representation
-- Mismatch between Rust and Lean naming conventions (Hax_adc_poc vs hax_adc_poc - had to rename manually or fix lakefile.toml after extraction) 
+Issue #[1915] (https://github.com/cryspen/hax/issues/1915) 
+- Mismatch between Rust and Lean naming conventions (Hax_adc_poc vs hax_adc_poc - had to rename manually or fix lakefile.toml after extraction) Issue #[1914] (https://github.com/cryspen/hax/issues/1914) 
 
-## Hax issues opened
-
-- Issue regarding type class resolution problems for numeric operations
-- Issue regarding missing projection functions for Tuple2
-- Issue regarding the non-functional hax_bv_decide tactic
