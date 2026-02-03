@@ -1,0 +1,31 @@
+# --- Rust ---
+target/
+**/*.rs.bk
+Cargo.lock
+
+# --- Lean / Lake ---
+/proofs/lean/extraction/.lake/
+/proofs/lean/extraction/lake-manifest.json
+/proofs/lean/extraction/**/.olean
+/proofs/lean/extraction/**/.ilean
+/proofs/lean/extraction/**/.c
+/proofs/lean/extraction/**/.bc
+/proofs/lean/extraction/**/.so
+/proofs/lean/extraction/**/.a
+
+# --- OS / editors ---
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+EOF
